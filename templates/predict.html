@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churn Detection | Predict</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Secular+One&display=swap">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    position:sticky;
+    top: 0;  
+}
+  
+ul.topnav li {
+    float: right;
+    padding-right: 20px;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #510481;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+  
+ul.topnav li a.active {
+    color: #fff;
+    background-color: #510481;
+}
+ul.topnav li.logo{
+    float: left;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 20px;
+  }
+@media screen and (max-width: 600px) {
+    ul.topnav li.logo, 
+    ul.topnav li {float: none;}
+}
+    
+.container {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+
+.card-header {
+  text-align: center; 
+  background-color: #510481; 
+  color: whitesmoke; 
+  padding: 10px; /* Menambahkan padding agar konten tidak terlalu dekat dengan tepi */
+  font-weight: bold;
+  
+  
+}
+
+.card {
+  border: 5px solid #3f2e4a; /* Menambahkan border solid 1px dengan warna abu-abu */
+  border-radius: 10px; /* Menambahkan border-radius agar sudut menjadi sedikit melengkung */ 
+
+}
+.form-row {
+    margin-bottom: 20px;
+    margin-right: 5px; 
+    margin-left: 30px;/* Atur margin bawah */
+  }
+
+label {
+  color: violet;
+  font-weight: bold; /* Atur warna teks label menjadi biru */
+}
+  </style>
+</head>
+<body>
+<ul class="topnav">
+    <li class="logo"><a href="#logo">Churn Detector</a></li>
+    <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+    <li><a href="{{ url_for('predict') }}"  class="active">Predict</a></li>
+    <li><a href="{{ url_for('instruction') }}">Instruction</a></li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+</ul>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            Enter variable
+          </div>
+          <div class="card-body">
+            <form method="post" action="{{ url_for('analyze') }}">
+              <div class="form-row">
+                <div class="form-group-col-md-6">
+                <label for="customer">Customer ID</label>
+                <input type="text" name="customer_id" class="form-control" id="customer" placeholder="Enter Customer ID" required>
+                </div>
+              <div class="form-group-col-md-6">
+                <label for="citizen">Senior Citizen</label>
+                 <input type="text" name="Senior_citizen" class="form-control" id="citizen" placeholder="Enter Senior Citizen" required>
+              </div>
+              </div>
+              <div class="form-row">
+              <div class="form-group-col-md-6">
+                <label for="phone">Phone Service</label>
+                <input type="text" name="phone_service" class="form-control" id="phone" placeholder="Enter Phone Servicee" required>
+              </div>
+              <div class="form-group-col-md-6">
+                <label for="lines">Multiple Lines</label>
+                <input type="text" name="multiple_lines" class="form-control" id="lines" placeholder="Enter Customer Age" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group-col-md-6">
+                <label for="device">Device Protection</label>
+                <input type="text" name="device_protections" class="form-control" id="device" placeholder="Enter Device Protection" required>
+              </div>
+              <div class="form-group-col-md-6">
+                <label for="bill">Paperless Billing</label>
+                <input type="text" name="biling" class="form-control" id="bill" placeholder="Enter Paperless Billing" required>
+              </div>
+              </div>
+              <div class="form-row">
+              <div class="form-group-col-md-6">
+                <label for="payment">Payment Method</label>
+                <input type="text" name="payment" class="form-control" id="payment" placeholder="Enter Payment Methods" required>
+              </div>
+              <div class="form-group-col-md-6">
+                <label for="charge">Total Charges</label>
+                <input type="text" name="total_charges" class="form-control" id="charge" placeholder="Enter Total Charges" required>
+              </div>
+              </div>
+              <div class="text-center">
+              <button type="submit" class="btn btn-warning">
+                <strong>Submit</strong></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>

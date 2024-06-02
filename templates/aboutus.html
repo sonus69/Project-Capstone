@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Churn Detector | About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutus.css') }}">
+    <!-- google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Secular+One&display=swap">
+</head>
+<body>
+<ul class="topnav">
+    <li class="logo"><a href="#logo">Churn Detector</a></li>
+    <li><a href="#aboutus" target="_self" class="active" >About Us</a></li>
+    <li><a href="{{ url_for('predict') }}">Predict</a></li>
+    <li><a href="{{ url_for('instruction') }}">Instruction</a></li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+</ul>
+
+<div class="grid-container">
+    <div class="grid1" id="about">About Us</div>
+    <div class="grid2"><p>
+      Churn Detector adalah sebuah aplikasi yang bertujuan untuk membantu perusahaan dalam industri layanan langganan untuk mengidentifikasi dan memprediksi perilaku churn pelanggan. Tingkat perpindahan pelanggan (Churn) adalah masalah serius bagi banyak bisnis berlangganan. Keberhasilan proyek ini akan memungkinkan perusahaan untuk mengambil tindakan proaktif untuk mempertahankan pelanggan yang rentan terhadap churn.
+      </p>
+      <p>
+      Aplikasi ini memanfaatkan teknik machine learning untuk menganalisis data berdasarkan historis pelanggan. Kemudian setelah analisis ini dilakukan, aplikasi akan memberikan prediksi churn untuk setiap pelanggan, serta rekomendasi tindakan yang dapat diambil untuk meminimalkan risiko churn tersebut.
+      </p>
+    </div>
+</div>
+
+<section>
+    <div class="team">
+        <h2>Meet The Team</h2>
+    </div>
+    <div class="row">
+        <!-- Kolom 1-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="{{ url_for('static',filename='images/shafiyah.png') }}" />
+            </div>
+            <h3>Shafiyah Putri</h3>
+            <p>Business Development</p>
+          </div>
+        </div>
+        <!-- Kolom 2-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="{{ url_for('static',filename='images/abie.png') }}" />
+            </div>
+            <h3>Abie Nugraha</h3>
+            <p>Technology</p>
+          </div>
+        </div>
+        <!-- Kolom 3-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="{{ url_for('static',filename='images/farhan.png') }}" />
+            </div>
+            <h3>Farhan Rizqi</h3>
+            <p>Chief Executive Officer</p>
+          </div>
+        </div>
+        <!-- Column 4-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="{{ url_for('static',filename='images/jusuf.png') }}" />
+            </div>
+            <h3>Jusuf pratama</h3>
+            <p>Sales and Marketing</p>
+          </div>
+        </div>
+        <!-- Kolom 5-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="{{ url_for('static',filename='images/anis.png') }}" />
+            </div>
+            <h3>Anis buanawati</h3>
+            <p>Design & Operasional</p>
+          </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churn Detector | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <!-- google font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Secular+One&display=swap">
+</head>
+<body>
+  <ul class="topnav">
+    <li class="logo"><a href="#logo">Churn Detector</a></li>
+    <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+    <li><a href="{{ url_for('predict') }}">Predict</a></li>
+    <li><a href="{{ url_for('instruction') }}">Instruction</a></li>
+    <li><a href="#home" target="_self" class="active" >Home</a></li>
+  </ul>
+  <div class="heading">
+    <h1 id="heading1">
+      Grow Your <br>
+      Business With Us
+    </h1>
+  </div>
+  <div class="box">
+    <table>
+      <tr>
+        <td class="content">
+          Our mission is to provide service providers with predictions about which customers are likely to leave their service (churn), enabling appropriate preventive or retention measures to be taken to retain those customers.
+          <div class="start">
+            <button><a class="link" href="{{ url_for('predict') }}">GET STARTED</a></button>
+          </div>
+        </td>
+        <td>
+          <img src="{{ url_for('static',filename='images/homepage.jpeg') }}">
+        </td>
+      </tr>
+    </table>
+    <br><br><br>
+  </div>
+</body>
+</html>

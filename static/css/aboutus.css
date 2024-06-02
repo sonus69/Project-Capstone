@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    position:sticky;
+    top: 0;  
+}
+  
+ul.topnav li {
+    float: right;
+    padding-right: 20px;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #510481;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+  
+ul.topnav li a.active {
+    color: #fff;
+    background-color: #510481;
+}
+ul.topnav li.logo{
+    float: left;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+@media screen and (max-width: 600px) {
+    ul.topnav li.logo, 
+    ul.topnav li {float: none;}
+}
+.grid1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #CE068A;
+    padding: 20px;
+}
+.grid2 {
+    color: #510481;
+    font-size: 18px;
+    padding: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 74%;
+    width: 98%; 
+    margin: 0 auto;
+    padding-top: 50px;
+    grid-column-gap: 20px;
+}
+h2 {
+    text-align: center;
+    font-size:30px;
+    font-weight: bold;
+    color: #CE068A;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+.column {
+    width: 100%;
+    padding: 0.5em 0;
+}
+.card {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #D7C9DF;
+}
+.card .img-container {
+    width: 8em;
+    height: 8em;
+    padding: 0.5em;
+    margin: 0 auto 2em auto;
+}
+.card img {width: 100%;}
+
+.card h3 {
+    font-family: 'Secular One', sans-serif;
+    font-weight:bolder;
+    text-transform:capitalize;
+    letter-spacing: 2px;
+}
+
+.card p {
+    font-family: 'Sanchez', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    margin: 1em 0 2em 0;
+}
+
+.card:hover {
+    background: linear-gradient(#e78ac8,#cdb1dd,#510481);
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+}
+@media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 0.6em 1em;
+    }
+    .column {
+      flex: 0 0 20%;
+      max-width: 20%;
+      padding: 0 1em;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kotak Tengah</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid purple; /* Warna border ungu */
+  border-radius: 10px;
+  background-color: #fff; /* Warna latar belakang putih */
+  margin-bottom: 20px; /* Membuat ruang antara kotak dan link */
+}
+
+  .box h1 {
+    margin-top: 0;
+  }
+  
+  .box h2 {
+    margin-top: 0;
+  }
+
+  .box p {
+    margin-bottom: 0;
+  }
+
+  .box a {
+    color: yellow;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="box">
+    <h2>Prediction</h2>
+    <hr>
+    {%if data == 1%}
+    <p>Your customer gonna stop using your service</p>
+
+    {%else%}
+    <p>Your customer gonna continue to using your service</p>
+
+    {%endif%}
+
+  </div>
+  <h3><a href="{{ url_for('predict') }}">Go back to prediction page</a></h3>
+        
+        
+
+

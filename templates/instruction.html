@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churn Detection | Instruction</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Secular+One&display=swap">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    position:sticky;
+    top: 0;  
+}
+  
+ul.topnav li {
+    float: right;
+    padding-right: 20px;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #510481;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+  
+ul.topnav li a.active {
+    color: #fff;
+    background-color: #510481;
+}
+ul.topnav li.logo{
+    float: left;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+@media screen and (max-width: 600px) {
+    ul.topnav li.logo, 
+    ul.topnav li {float: none;}
+}
+    
+
+
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .border-container {
+        border: 2px solid #800080; /* purple border */
+        padding: 20px;
+        max-width: 600px;
+    }
+    h2 {
+        margin-top: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<ul class="topnav">
+        <li class="logo"><a href="#logo">Churn Detector</a></li>
+        <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+        <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        <li><a href="{{ url_for('instruction') }}" class="active">Instruction</a></li>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+</ul>
+
+<div class="container">
+    <div class="border-container">
+        <h2><b>Instruction Page</b></h2>
+        <ul>
+            <li><strong>Senior Citizen:</strong> If customer is senior citizen enter 1, otherwise enter 0</li>
+            <li><strong>Phone Service:</strong> If customer using phone service enter 1, otherwise enter 0</li>
+            <li><strong>Multiple Lines:</strong> If Customer have has more than one telephone line enter 1, otherwise enter 0</li>
+            <li><strong>Device Protection:</strong> If customer has device protection enter 1, otherwise enter 0</li>
+            <li><strong>Paperless Billing:</strong> If customer receives an electronic bill enter 1, otherwise enter 0</li>
+            <li><strong>Payment Method:</strong> If customer payment method is Bank Transfer enter 0, Credit Card enter 1, Mailed check enter 2, Electronic check enter 3</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+
+
